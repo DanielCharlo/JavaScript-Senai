@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o nome do dispostivo antigo<input type="text" id="dispositivo"><br><br>
+    <button onclick="exibirDispositivo()">Ver comentario</button>
+    <p id="resultado"></p>
+
+    <script>
+        function exibirDispositivo(){
+            let dispositivo = document.getElementById("dispositivo").value.trim();
+            let resultado;
+
+            switch(dispositivo) {
+
+                case "Fita Cassete":
+                    resultado = "O aparelho de fita cassete foi um dos principais dispositivos de reprodução de áudio doméstico entre as décadas de 1970 e 1990. Ele utiliza fitas magnéticas armazenadas em cartuchos plásticos chamados cassetes para gravar e reproduzir som. Esses aparelhos podiam ser portáteis — como os famosos walkmans — ou parte de sistemas de som maiores, com alto-falantes embutidos e recursos como rádio AM/FM, duplo deck para cópia entre fitas e gravação de voz via microfone,O funcionamento baseia-se na leitura da fita magnética por cabeçotes que captam os sinais de áudio gravados. Apesar de sua qualidade inferior aos padrões digitais atuais, o som analógico das fitas é muitas vezes lembrado com nostalgia e charme vintage, Com o avanço da tecnologia e a chegada dos CDs, MP3s e streaming, o toca-fitas foi sendo gradualmente substituído, mas segue como um item de coleção, usado por entusiastas da música retrô e apreciadores do som analógico.";
+                    break;
+                case "DVD":
+                    resultado = "O aparelho de DVD é um dispositivo eletrônico usado para reproduzir discos digitais (DVDs), muito popular nos anos 2000. Ele permite assistir a vídeos com qualidade superior à do videocassete, além de oferecer menus interativos, legendas e extras. Com a chegada do Blu-ray e do streaming, seu uso diminuiu, mas ainda é comum em muitas casas."
+                    break;
+                case "CD":
+                    resultado = "O aparelho de CD é usado para reproduzir discos compactos (CDs), populares a partir dos anos 1990. Ele permite ouvir músicas com qualidade digital, sendo um grande avanço em relação às fitas cassete. Muitos aparelhos também contam com rádio e entrada para outros dispositivos"
+                    break;
+                default:
+                    resultado = "Dispostivo não encontrado"
+            }
+            document.getElementById("resultado").innerHTML = `O dispositivo é <strong>${dispositivo}</strong> e suas informações:<br>${resultado}`;
+
+        }
+    </script>
+</body>
+</html>
